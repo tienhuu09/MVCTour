@@ -1,0 +1,73 @@
+﻿@model MVCTour.Models.TourPlaceViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div id="slideshow">
+    <div class="slide-wrapper">
+        <div class="slide"><img class="slide-img text-img" src="~/css/img/Dalat.png" /></div>
+        <div class="slide"><img class="slide-img text-img" src="~/css/img/danang.png" /></div>
+        <div class="slide"><img class="slide-img text-img" src="~/css/img/dienbien.png" /></div>
+    </div>
+</div>
+
+<div class="div-tour">
+    <p> Khám Phá Lịch Sử - Văn Hóa - Con Người Việt Nam với</p>
+    <h2>Tour Trong Nước</h2>
+</div>
+<div class="div-box">
+    <div class="box-tour">
+        <img class="test-1" src="~/css/img/test1.jpg" />
+        <h4>DU LỊCH ĐÀ NẴNG: SƠN TRÀ - BÀ NÀ - CẦU RỒNG - NGŨ HÀNH SƠN</h4>
+        <div class="item">
+            <a class="ti-flag-alt ti-1"></a><a class="tour-3"> Hồ Chí Minh</a>
+        </div>
+        <div class="item">
+            <a class="ti-time ti-1"></a><a class="tour-3"> 10/03/2022</a>
+        </div>
+        <div class="price">
+            <p class="">3.690.000đ | 4 Ngày 3 Đêm</p>
+        </div>
+    </div>
+    <div class="box-tour2">
+        <img class="test-2" src="~/css/img/test2.jpg" />
+        <h4>DU LỊCH PHÚ QUỐC: COMBO MANGO BAY RESORT 3 SAO</h4>
+        <div class="item">
+            <a class="ti-flag-alt ti-1"></a><a class="tour-3"> Vũng Tàu</a>
+        </div>
+        <div class="item">
+            <a class="ti-time ti-1"></a><a class="tour-3"> 15/03/2022</a>
+        </div>
+        <div class="price">
+            <p class="">3.590.000đ | 3 Ngày 2 Đêm</p>
+        </div>
+    </div>
+    <div class="box-tour3">
+        <img class="test-3" src="~/css/img/test3.jpg" />
+        <h4>DU LỊCH ĐÀ LẠT: LẠC BƯỚC TRONG NHỮNG NGÀY ĐÔNG</h4>
+        <div class="item">
+            <a class="ti-flag-alt ti-1"></a><a class="tour-3"> Nha Trang</a>
+        </div>
+        <div class="item">
+            <a class="ti-time ti-1"></a><a class="tour-3"> 24/03/2022</a>
+        </div>
+        <div class="price">
+            <p class="">2.890.000đ | 3 Ngày 2 Đêm</p>
+        </div>
+    </div>
+</div>
+<img class="img-tour" src="~/css/img/bg1.jpg" />
+
+<div class="div-img">
+    <h2 class="text-center">KHOẢNH KHẮC LỮ HÀNH</h2>
+    <img src="~/css/img/1.jpg" />
+    <img src="~/css/img/2.jpg" />
+    <img src="~/css/img/3.jpg" />
+    <img src="~/css/img/4.jpg" />
+    <img src="~/css/img/5.jpg" />
+    <img src="~/css/img/6.jpg" />
+</div>
+<div class="div-a">
+    <a class="btn btn-primary" asp-controller="Home" asp-action="Privacy">Xem Tất Cả</a>
+</div>
+

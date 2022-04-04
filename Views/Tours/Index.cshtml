@@ -1,0 +1,106 @@
+﻿@model MVCTour.Models.TourPlaceViewModel
+
+@{
+    ViewData["Title"] = "Index";
+
+    int intSno = 0;
+}
+<div class="in-tour">
+
+    <h2 class="tour-2">Quản Lí Tour</h2>
+
+    <p class="tour-2">
+        @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+        {
+            <a class="btn btn-success" asp-action="Create">Tạo Thêm Tour</a>
+        }
+    </p>
+    <div class="div-search">
+        <form asp-controller="Tours" asp-action="Index" method="get">
+            <p>
+                <select asp-for="TourPlace" asp-items="Model.Places">
+                    <option value="">Điểm Đến</option>
+                </select>
+
+                Địa Điểm: <input type="text" name="searchString" />
+                <input class="btn btn-primary" type="submit" value="Tìm Tour" />
+            </p>
+        </form>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    STT
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tours[0].Code)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tours[0].NameTour)
+                </th>
+                @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+                {
+                <th>
+                    @Html.DisplayNameFor(model => model.Tours[0].DepartureDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tours[0].Place)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tours[0].Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tours[0].Note)
+                </th>
+                }
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Tours)
+            {
+                intSno = intSno + 1;
+            <tr>
+                <td>
+                    @intSno
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Code)
+                </td>
+                 <td>
+                    @Html.DisplayFor(modelItem => item.NameTour)
+                </td>
+                @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+                {
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartureDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Place)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Note)
+                </td>
+                }
+            <td>
+                @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+                {
+            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Sửa</a>
+                }
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Chi Tiết</a>
+                @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+                {
+            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Xóa</a>
+                }
+            </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

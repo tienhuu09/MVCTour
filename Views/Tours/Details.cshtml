@@ -1,0 +1,57 @@
+﻿@model MVCTour.Models.Tour
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="tour-2">Chi Tiết</h2>
+
+<div>
+    <h5 class="tour-2">Tour</h5>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Code)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Code)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NameTour)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NameTour)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DepartureDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DepartureDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Place)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Place)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+    {
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Id">Chỉnh Sửa</a>
+    }
+    <a class="btn btn-dark" asp-action="Index">Quay Lại Trang</a>
+</div>

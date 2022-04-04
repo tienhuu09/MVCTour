@@ -1,0 +1,30 @@
+﻿
+@{ ViewData["Title"] = "Login"; }
+
+
+<style>
+    body {
+        background: linear-gradient(#141e30, #243b55);
+    }
+    .ghinho{
+        color: white;
+    }
+</style>
+
+<div class="login-box">
+    <h2><strong>Đăng Nhập </strong></h2><br />
+    <form asp-action="login" method="post">
+        <div class="user-box">
+            <input type="text"  id="userName" name="userName" required name="username">
+            <label>UserName</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="password" id="password" required name="password">
+            <label>Password</label>
+        </div>
+        <p  class="ghinho">
+        <input type="checkbox" name="ghinho" /> Ghi nhớ tài khoản </p> <br />
+            <button class="btn btn-info" type="reset">Tạo Mới</button>
+            <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+    </form>
+</div>

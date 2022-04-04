@@ -1,0 +1,22 @@
+﻿@{ ViewData["Title"] = "Info Page"; }
+
+<style>
+    body {
+        background: linear-gradient(#141e30, #243b55);
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2><strong>Logout </strong></h2><br /><br />
+            Xin Chào @User.Identity.Name ! Bạn có thể logout tại đây
+            <a class="btn btn-outline-warning"  asp-action="logout" asp-controller="account">
+                Đăng Xuất
+            </a>
+            <br />
+            <br />
+            <h4>Chào mừng bạn đến với website Tour Du Lịch của tôi.</h4>
+        </div>
+    </div>
+</div>
