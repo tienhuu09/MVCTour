@@ -29,7 +29,19 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Thư Viện</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tours" asp-action="Index">Tour</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Next" asp-action="Index">Du Lịch</a>
+                        </li>
+                        <li class="nav-item">
+                            @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+                            {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Tours" asp-action="Index">Dữ Liệu</a>
+                            }
+                        </li>
+                        <li class="nav-item">
+                            @if (ViewContext.HttpContext.User.IsInRole("User"))
+                            {
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Tours" asp-action="Index">Dữ Liệu</a>
+                            }
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="login">Login</a>
@@ -49,7 +61,16 @@
                     </ul>
                 </div>
             </div>
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
         </nav>
+
     </header>
     <div class="container-body container">
         <main role="main" class="pb-3">

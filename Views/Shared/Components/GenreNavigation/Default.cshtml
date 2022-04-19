@@ -1,0 +1,17 @@
+﻿@model IEnumerable<string>
+<a class="btn btn-block btn-outline-primary" asp-action="Index"
+   asp-controller="Next" asp-route-genre="">
+    Điểm Đến
+</a>
+@foreach (string place in Model)
+{
+    <a class="btn btn-block
+ @(place == ViewBag.SelectedGenre
+ ? "btn-info": "btn-outline-info")"
+       asp-action="Index" asp-controller="Next"
+       asp-route-place="@place"
+       asp-route-Page="1">
+        @place
+    </a>
+}
+

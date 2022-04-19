@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MVCTour.Data;
+using MVCTour.Models;
 
 namespace MVCTour
 {
@@ -29,6 +30,12 @@ namespace MVCTour
         [Obsolete]
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
+            services.AddDbContext<MVCTourContext>(opts => {
+                opts.UseSqlServer(
+                Configuration["ConnectionStrings:MVCTourContext"]);
+            });
+            services.AddScoped<ITourRepository,EFTourRepository>();
             services.AddControllersWithViews();
 
             services.AddDbContext<MVCTourContext>(options =>
@@ -63,12 +70,25 @@ namespace MVCTour
             app.UseAuthentication();
             app.UseCookiePolicy();
             app.UseAuthorization();
+            // old URL: http://localhost:44333/Page=2
+            // new URL: https://localhost:44333/Tour/2
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=index}/{id?}");
-            });
+                    pattern: "{controller=Home}/{action=Index}");
+                endpoints.MapControllerRoute("placepage","{place}/{Page:int}",
+                new { Controller = "Next", action = "Index" });
+                endpoints.MapControllerRoute("page", "{Page:int}",
+                new { Controller = "Next", action = "Index", Page = 1 });
+                endpoints.MapControllerRoute("place", "{place}",
+                new { Controller = "Next", action = "Index", Page = 1 });
+                endpoints.MapControllerRoute("pagination","Tours/{Page}",
+                new { Controller = "Next", action = "Index", Page = 1 });
+                endpoints.MapDefaultControllerRoute();
+
+        });
+
         }
     }
 }

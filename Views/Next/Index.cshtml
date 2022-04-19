@@ -1,0 +1,23 @@
+﻿@model MVCTour.Models.ViewModels.TourListViewModel
+@{
+    ViewData["Title"] = "Du Lịch";
+
+}
+<div class="row m-1 p-1">
+    <div id="categories" class="col-3">
+        <p>Tour App nơi giúp bạn tìm kiếm những Tour Du Lịch ở Việt Nam mà không cần rời khỏi nhà căn nhà của bạn.</p>
+        <vc:genre-navigation />
+
+    </div>
+    <div class="col-9">
+        @foreach (var p in Model.Nexts)
+        {
+            <partial name="TourTemplate" model="p" />
+        }
+
+        <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+             page-class="btn" page-class-normal="btn-outline-dark"
+             page-class-selected="btn-primary" page-url-genre="@Model.CurrentPlace"
+             class="btn-group pull-right m-1">
+        </div>
+    </div>

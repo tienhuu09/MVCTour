@@ -22,7 +22,7 @@ namespace MVCTour.Controllers
         
         // GET: Tours
         [Authorize(Roles = "Admin, User")]
-        public async Task<IActionResult> Index(string tourPlace, string searchString, int pg=1)
+        public async Task<IActionResult> Index(string tourPlace, string searchString, int pg=1, int Page=1)
         {
             // Use LINQ to get list of genres.
             IQueryable<string> placeQuery = from b in _context.Tour
@@ -45,6 +45,7 @@ namespace MVCTour.Controllers
             };
             return View(TourPlaceVM);
         }
+
         // GET: Tours/Details/5
         public async Task<IActionResult> Details(int? id)
         {

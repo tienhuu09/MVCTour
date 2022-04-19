@@ -18,7 +18,8 @@ namespace MVCTour.Data
             : base(options)
         {
         }
-        public DbSet<Tour> Tourss { get; set; }
+        public DbSet<Tour> Tours { get; set; }
+        public DbSet<Tour> Nexts { get; set; }
         public DbSet<MVCTour.Models.Tour> Tour { get; set; }
     }
 }

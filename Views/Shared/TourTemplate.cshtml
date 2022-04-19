@@ -1,0 +1,16 @@
+﻿@model Tour
+<div class="card" style="width: 100%;">
+    <div class="card-body">
+        <h5 class="card-title">
+            @Model.NameTour
+            <span class="badge badge-pill badge-primary">
+                <small>@Model.Price.ToString("c")</small>
+            </span>
+            <span class="badge badge-pill badge-dark">
+                <small>@Model.DepartureDate</small>
+            </span>
+        </h5>
+        <h6 class="card-subtitle mb-2 text-muted">@Model.Place</h6>
+        <p class="card-text">@Model.Note</p>
+    </div>
+</div>

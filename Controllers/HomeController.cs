@@ -23,28 +23,9 @@ namespace MVCTour.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index(string tourPlace, string searchString)
+        public IActionResult Index()
         {
-            // Use LINQ to get list of genres.
-            IQueryable<string> placeQuery = from b in _context.Tour
-                                            orderby b.Place
-                                            select b.Place;
-            var tours = from b in _context.Tour
-                        select b;
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                tours = tours.Where(s => s.NameTour!.Contains(searchString));
-            }
-            if (!string.IsNullOrEmpty(tourPlace))
-            {
-                tours = tours.Where(x => x.Place == tourPlace);
-            }
-            var TourPlaceVM = new TourPlaceViewModel
-            {
-                Places = new SelectList(await placeQuery.Distinct().ToListAsync()),
-                Tours = await tours.ToListAsync()
-            };
-            return View(TourPlaceVM);
+            return View();
         }
 
         public IActionResult Privacy()
