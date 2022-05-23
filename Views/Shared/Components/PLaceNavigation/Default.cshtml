@@ -1,12 +1,12 @@
 ﻿@model IEnumerable<string>
 <a class="btn btn-block btn-outline-primary" asp-action="Index"
-   asp-controller="Next" asp-route-genre="">
+   asp-controller="Next" asp-route-place="">
     Điểm Đến
 </a>
 @foreach (string place in Model)
 {
-    <a class="btn btn-block
- @(place == ViewBag.SelectedGenre
+    <a class="btn btn-block shadow-lg p-3 mb-3 rounded
+ @(place == ViewBag.SelectedPlace
  ? "btn-info": "btn-outline-info")"
        asp-action="Index" asp-controller="Next"
        asp-route-place="@place"
@@ -14,4 +14,3 @@
         @place
     </a>
 }
-

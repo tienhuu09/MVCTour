@@ -11,7 +11,7 @@ namespace MVCTour.Controllers
     public class NextController : Controller
     {
         private ITourRepository repository;
-        public int PageSize = 4;
+        public int PageSize = 3;
         public NextController(ITourRepository repo)
         {
             repository = repo;

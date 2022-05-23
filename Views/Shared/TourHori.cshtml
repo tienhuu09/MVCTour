@@ -1,0 +1,26 @@
+﻿@model Tour
+<div class="card mb-3 border-info" style="width: 100%;">
+    <div class="row g-0">
+        <div class="col-4">
+            <img src="/css/img/vinpeal.jpg" style="width:100%;" />
+        </div>
+        <div class="col-8">
+            <div class="card-body">
+                <h4 class="card-title">
+                    @Model.NameTour
+                    <span class=" badge-pill badge-primary">
+                        <small>@Model.Price.ToString("c")</small>
+                    </span>
+                </h4>
+                <h6 class="card-subtitle mb-2 text-muted">@Model.Place</h6>
+                <h5>
+                    <span class="badge badge-pill badge-dark">
+                        <small class="font-italic">@Model.DepartureDate</small>
+                    </span>
+                </h5>
+                <p class="card-text"></p>
+                <p class="card-text"><h6 class="text-muted">@Model.Note</h6></p>
+            </div>
+        </div>
+    </div>
+</div>

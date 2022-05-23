@@ -5,18 +5,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MVCTour.Models;
 
-namespace BooksStore.ViewComponents
+namespace MVCTour.ViewComponents
 {
-    public class GenreNavigation : ViewComponent
+    public class PlaceNavigation : ViewComponent
     {
         private ITourRepository repository;
-        public GenreNavigation(ITourRepository repo)
+        public PlaceNavigation(ITourRepository repo)
         {
             repository = repo;
         }
         public IViewComponentResult Invoke()
         {
-            ViewBag.SelectedGenre = RouteData?.Values["place"];
+            ViewBag.SelectedPlace = RouteData?.Values["place"];
             return View(repository.Nexts
             .Select(x => x.Place)
             .Distinct()

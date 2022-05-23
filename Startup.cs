@@ -49,6 +49,8 @@ namespace MVCTour
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,9 +76,7 @@ namespace MVCTour
             // new URL: https://localhost:44333/Tour/2
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}");
+                endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}");
                 endpoints.MapControllerRoute("placepage","{place}/{Page:int}",
                 new { Controller = "Next", action = "Index" });
                 endpoints.MapControllerRoute("page", "{Page:int}",
@@ -87,8 +87,8 @@ namespace MVCTour
                 new { Controller = "Next", action = "Index", Page = 1 });
                 endpoints.MapDefaultControllerRoute();
 
-        });
-
+                endpoints.MapRazorPages();
+            });
         }
     }
 }

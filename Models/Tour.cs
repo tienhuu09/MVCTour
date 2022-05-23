@@ -28,7 +28,6 @@ namespace MVCTour.Models
         public string Place { get; set; }
 
         [DataType(DataType.Currency)]
-        [Range(1, 100)]
         [Display(Name = "Giá Tiền")]
         public decimal Price { get; set; }
 
