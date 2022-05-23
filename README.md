@@ -10,7 +10,6 @@
 ![image](https://user-images.githubusercontent.com/102577671/169765022-5633f925-ca9f-43e2-86ba-8375a9e7a72c.png)
 ## Chức Năng Đăng Nhặp
 ### Dành cho Admin và User
-UserName: Admin  hoặc  User 
-\n password: password
+UserName: Admin  hoặc  User || password: password
 
 ![image](https://user-images.githubusercontent.com/102577671/169766220-afcbfdba-0818-4364-9b34-0c7c909e4377.png)
