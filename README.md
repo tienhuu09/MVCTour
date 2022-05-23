@@ -12,7 +12,7 @@
 ### Dành cho Admin và User
 UserName: Admin  hoặc  User || password: password
 ![image](https://user-images.githubusercontent.com/102577671/169766220-afcbfdba-0818-4364-9b34-0c7c909e4377.png)
-##### Admin và User sau khi login sẽ được cắp quyền khác nhau
+#### Admin và User sau khi login sẽ được cắp quyền khác nhau
 Sau khi đăng nhặp chúng ta sẽ thấy xuất hiện thêm Trang Dữ Liệu nơi chứa tất cả các Tour và thông tin Tour
 #### Giao Diện của Admin
 Admin thì sẽ có được những chức năng như: Tạo Tour, Thay Đổi Thông Tin Tour Và Xóa.
