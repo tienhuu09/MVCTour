@@ -11,7 +11,7 @@
 ## Chức Năng Đăng Nhặp
 ### Dành cho Admin và User
 UserName: Admin  hoặc  User || password: password
-![image](https://user-images.githubusercontent.com/102577671/169769402-8be4f1e8-c847-46f4-81c6-c0326373705b.png)
+![image](https://user-images.githubusercontent.com/102577671/169769512-ce027809-82b7-4412-95c1-99dcf2ee29f7.png)
 #### Admin và User sau khi login sẽ được cắp quyền khác nhau
 Sau khi đăng nhặp chúng ta sẽ thấy xuất hiện thêm Trang Dữ Liệu nơi chứa tất cả các Tour và thông tin Tour
 #### Giao Diện của Admin
