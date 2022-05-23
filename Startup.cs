@@ -89,6 +89,7 @@ namespace MVCTour
 
                 endpoints.MapRazorPages();
             });
+
         }
     }
 }
