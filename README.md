@@ -11,5 +11,14 @@
 ## Chức Năng Đăng Nhặp
 ### Dành cho Admin và User
 UserName: Admin  hoặc  User || password: password
-
 ![image](https://user-images.githubusercontent.com/102577671/169766220-afcbfdba-0818-4364-9b34-0c7c909e4377.png)
+###### Admin và User sau khi login sẽ được cắp quyền khác nhau
+Sau khi đăng nhặp chúng ta sẽ thấy xuất hiện thêm Trang Dữ Liệu nơi chứa tất cả các Tour và thông tin Tour
+###### Giao Diện của Admin
+Admin thì sẽ có được những chức năng như: Tạo Tour, Thay Đổi Thông Tin Tour Và Xóa.
+Chức năng tìm kiếm có trên Admin và User
+![image](https://user-images.githubusercontent.com/102577671/169767601-29d503c5-bf0c-42ea-b19d-ce482edbdaea.png)
+
+##### Giao diện của User
+User có thể Tìm kiếm Tour và Xem Thông Tin của Tour đó
+![image](https://user-images.githubusercontent.com/102577671/169768479-ebf7c1ff-00be-4bd0-ad14-adb7a81f5a20.png)
