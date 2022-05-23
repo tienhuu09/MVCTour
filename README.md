@@ -10,4 +10,4 @@
 ![image](https://user-images.githubusercontent.com/102577671/169765022-5633f925-ca9f-43e2-86ba-8375a9e7a72c.png)
 ## Chức Năng Đăng Nhặp
 ### Dành cho Admin và User
-![image](https://user-images.githubusercontent.com/102577671/169765538-cfc509fa-aa5b-4bf0-a716-6ca0d5684384.png)
+![image](https://user-images.githubusercontent.com/102577671/169765764-49954e4e-6883-4db6-afeb-c8c751d037ae.png)
