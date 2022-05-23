@@ -8,3 +8,6 @@
 ![image](https://user-images.githubusercontent.com/102577671/169763935-bf9d6807-d368-4a7e-8df9-1b0315b291ef.png)
 ### Đến với Thư Viện nơi lưu giữ Những Khoảnh Khắc Lữ Hành
 ![image](https://user-images.githubusercontent.com/102577671/169765022-5633f925-ca9f-43e2-86ba-8375a9e7a72c.png)
+## Chức Năng Đăng Nhặp
+### Dành cho Admin và User
+![image](https://user-images.githubusercontent.com/102577671/169765538-cfc509fa-aa5b-4bf0-a716-6ca0d5684384.png)
